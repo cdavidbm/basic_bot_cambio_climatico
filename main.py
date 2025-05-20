@@ -50,9 +50,9 @@ def consultar_API_de_clima(city: str) -> str:
 
 @bot.command()
 async def clima(ctx, *, city: str):
-    weather_info = consultar_API_de_clima(city)
-    await ctx.send(f"Clima en {city}:\n{weather_info}")
-    hablar(weather_info)
+    info_del_clima = consultar_API_de_clima(city)
+    await ctx.send(f"Clima en {city}:\n{info_del_clima}")
+    hablar(info_del_clima)
 
 @bot.command()
 async def calentamiento_global(ctx):
